@@ -1,51 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Questions</title>
-</head>
-<body>
-    <h1>Quiz Questions</h1>
-    <div id="quiz"></div>
-
-    <script>
-        // JSON с вопросами и вариантами ответов
-        var quizData = {
-            "questions": [
-                {
-                    "question": "Какого цвета небо?",
-                    "options": ["Синее", "Зеленое", "Красное", "Желтое"],
-                    "correct_answer": "Синее"
-                },
-                {
-                    "question": "Сколько дней в году?",
-                    "options": ["365", "366", "360", "300"],
-                    "correct_answer": "365"
-                },
-                {
-                    "question": "Как называется столица Франции?",
-                    "options": ["Берлин", "Мадрид", "Париж", "Лондон"],
-                    "correct_answer": "Париж"
-                },
-                {
-                    "question": "Какое животное является символом России?",
-                    "options": ["Тигр", "Медведь", "Лев", "Волк"],
-                    "correct_answer": "Медведь"
-                }
-            ]
-        };
-
-        // Отображаем вопросы и варианты ответов на странице
-        var quizElement = document.getElementById('quiz');
-        quizData.questions.forEach(function(questionData, index) {
-            var questionHTML = '<div><strong>Вопрос ' + (index + 1) + ':</strong> ' + questionData.question + '<ul>';
-            questionData.options.forEach(function(option) {
-                questionHTML += '<li>' + option + '</li>';
-            });
-            questionHTML += '</ul><strong>Правильный ответ:</strong> ' + questionData.correct_answer + '</div>';
-            quizElement.innerHTML += questionHTML;
-        });
-    </script>
-</body>
-</html>
+{
+  "questions": [
+    {
+      "question": "Какого цвета небо?",
+      "options": ["Синее", "Зеленое", "Красное", "Желтое"],
+      "correct_answer": "Синее"
+    },
+    {
+      "question": "Сколько дней в году?",
+      "options": ["365", "366", "360", "300"],
+      "correct_answer": "365"
+    },
+    {
+      "question": "Как называется столица Франции?",
+      "options": ["Берлин", "Мадрид", "Париж", "Лондон"],
+      "correct_answer": "Париж"
+    },
+    {
+      "question": "Какое животное является символом России?",
+      "options": ["Тигр", "Медведь", "Лев", "Волк"],
+      "correct_answer": "Медведь"
+    }
+  ]
+}
